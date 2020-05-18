@@ -1,0 +1,12 @@
+<h1>다음 뉴스 랭킹 추출</h1>
+<form action="/news/ranking" method="post">
+    <input type="text" name="int_date" placeholder="날짜입력 ex) 20200101">
+    <input type="submit">
+</form>
+
+
+
+{% for new in news %}
+    <p><a href='{{ new["url"] }}'>{{ new["title"] }}</a></p>
+{% endfor %}
+    
